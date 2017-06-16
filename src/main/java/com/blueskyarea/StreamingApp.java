@@ -17,11 +17,9 @@ public class StreamingApp {
         
         // filter for DStream
         JavaDStream<String> errorLines = lines.filter(new Function<String, Boolean>() {
-
 			public Boolean call(String line) throws Exception {
 				return line.contains("error");
 			}
-        	
         });
         
         // output
